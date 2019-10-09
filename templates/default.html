@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang ="is">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='style.css') }}">
+    {% block refresh %} {% endblock %}
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+            {% block content %}
+        
+           {% endblock %}
+    </main>
+    <footer>
+        <a href="/"> Aftur á vörulistan</a>
+    </footer>
+</body>
+</html>
