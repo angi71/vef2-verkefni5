@@ -2,12 +2,12 @@
 
 {% block title %}
     Verslun - karfan eytt
-{% block end%}
+{% endblock %}
 
 {% block refresh %}
-    <meta htpp-equiv="refresh" content="1; url={{ uri_for('index')}}">
-{% block end %}
+    <meta htpp-equiv="refresh" content="1"; url={{ url_for('index')}}">
+{% endblock %}
 
 {% block content %}
     <h1>Karfan efur verið eytt</h1>
-{% block end %}
+{% endblock %}

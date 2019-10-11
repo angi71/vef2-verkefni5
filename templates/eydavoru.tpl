@@ -2,12 +2,12 @@
 
 {% block title %}
     Verslun - vara fjarðlægð
-{% block end%}
+{% endblock %}
 
 {% block refresh %}
-    <meta htpp-equiv="refresh" content="1; url={{ uri_for('karfa')}}">
-{% block end %}
+    <meta htpp-equiv="refresh" content="1"; url={{ url_for('karfa')}}">
+{% endblock %}
 
 {% block content %}
     <h1>Varan hefur verði fjarðlægð úr körfuni</h1>
-{% block end %}
+{% endblock %}

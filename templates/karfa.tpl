@@ -1,6 +1,6 @@
 {% extends "default.html" %}
 
-    <h1>Vörur í körfu</h1>
+{% block content %}
     {% if tom %}
         <h1>Karfan er tóm</h1>
     {% else %}
@@ -17,13 +17,13 @@
             </tr>
             {% for i in k %}
                 <tr>
-                    <td><a href="/eydavoru{{ i[0] }}">{{ i[1] }}</a></td>
-                    <td><b> {{ i [3] }}</b></td>
+                    <td><a href="/eydavoru/{{ i[0] }}">{{ i[1] }}</a></td>
+                    <td><b> {{ i[3] }}</b></td>
                 </tr>
             {% endfor %}
                 <tr>
                     <td>Samtals:</td>
-                    <th> {{ Samtals }} </th>
+                    <th> {{ s }} </th>
                 </tr>
         </table>
     {% endif %}
@@ -36,8 +36,8 @@
         <label>Email:
             <input type="email" name="Email" requierd placeholder ="nam@email.com">
         <label>Sími:
-            <input type="text" name="Simi" requierd pattern="(/354 )?\d{3}[ -]?d{4}$" requierd placeholder ="7829817">
-        <input type="hidden" name="Samtals" value="{{ samtals }}"> 
+            <input type="text" name="Simi" requierd placeholder ="7829817">
+        <input type="hidden" name="Samtals" value="{{ s }}"> 
         <input type = "submit" value = "Kaupa" />
     </form>
 

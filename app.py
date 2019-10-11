@@ -43,9 +43,9 @@ def karfa():
         fjoldi = len(karfa)
         for i in karfa:
             summa += int(i[3])
-        return render_template("karfa.tpl", k ="karfa", tom = False, f ="fjoldi", s ="summa")
+        return render_template("karfa.tpl", k = karfa, tom = False, f = fjoldi , s = summa)
     else:
-        return render_template("karfa.tpl", k ="karfa", tom = True,)
+        return render_template("karfa.tpl", k = karfa, tom = True)
 
 @app.route("/eydavoru/<int:id>")
 def eydavoru(id):
@@ -66,7 +66,7 @@ def eyda():
 
 @app.route("/result", methods = ["POST"])
 def result():
-    if request.method == ["POST"]:
+    if request.method == "POST":
         kwargs={
             "name": request.form["Nafn"],
             "email": request.form["Email"],
